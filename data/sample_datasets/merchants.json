@@ -10,5 +10,23 @@
     "name": "Maple Grocery",
     "category": "grocery",
     "geo": {"lat": 43.66, "lng": -79.39}
+  },
+  {
+    "place_id": "poi_003",
+    "name": "Paws & Co.",
+    "category": "pet_store",
+    "geo": {"lat": 43.648, "lng": -79.382}
+  },
+  {
+    "place_id": "poi_004",
+    "name": "Station Cafe",
+    "category": "coffee",
+    "geo": {"lat": 43.647, "lng": -79.374}
+  },
+  {
+    "place_id": "poi_005",
+    "name": "HealthMart Pharmacy",
+    "category": "pharmacy",
+    "geo": {"lat": 43.653, "lng": -79.391}
   }
 ]

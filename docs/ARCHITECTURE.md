@@ -2,6 +2,7 @@
 
 ## Layer A (Rules)
 - POI category -> predicted category
+- Mock POI detector uses local merchants + fallback category hash
 - Amount/time heuristics
 - Category -> reward optimization
 

@@ -2,7 +2,7 @@
 
 ## Now
 - MVP rules engine
-- Simple recommendation pipeline
+- Mock UI for adding cards and auto-detecting benefits
 
 ## Next
 - POI lookup integration

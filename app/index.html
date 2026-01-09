@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Card Picker - Add Card Mock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Smart Card Picker</p>
+          <h1>Auto-detect card benefits</h1>
+          <p class="subhead">
+            Add a card and watch the mock engine pull benefits from a local catalog.
+            This models the future "API to all banks" flow without integrations.
+          </p>
+        </div>
+        <div class="badge">MVP Mock</div>
+      </header>
+
+      <main class="grid">
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Add a card</h2>
+            <span class="pill">Step 1</span>
+          </div>
+          <form id="card-form">
+            <label>
+              Card name
+              <input id="card-name" type="text" placeholder="Amex Cobalt" required />
+            </label>
+            <label>
+              Issuer
+              <select id="card-issuer" required>
+                <option value="">Select issuer</option>
+                <option>American Express</option>
+                <option>RBC</option>
+                <option>TD</option>
+                <option>Scotiabank</option>
+                <option>CIBC</option>
+                <option>BMO</option>
+                <option>Rogers</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              Network
+              <select id="card-network" required>
+                <option value="">Select network</option>
+                <option>Amex</option>
+                <option>Visa</option>
+                <option>Mastercard</option>
+              </select>
+            </label>
+            <label>
+              Last 4 (optional)
+              <input id="card-last4" type="text" placeholder="1234" maxlength="4" />
+            </label>
+            <div class="actions">
+              <button type="submit">Detect benefits</button>
+              <button type="button" class="secondary" id="clear-btn">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel" id="result-panel" aria-live="polite">
+          <div class="panel-header">
+            <h2>Detected benefits</h2>
+            <span class="pill" id="match-pill">Waiting</span>
+          </div>
+          <div id="benefits-output" class="empty-state">
+            Submit a card to see mocked benefits.
+          </div>
+        </section>
+      </main>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Location sweep (mock)</h2>
+          <span class="pill">Step 2</span>
+        </div>
+        <div class="sweep-controls">
+          <label class="checkbox">
+            <input type="checkbox" id="amex-toggle" checked />
+            Amex accepted
+          </label>
+          <button id="sweep-btn">Run sweep</button>
+        </div>
+        <div id="sweep-output" class="empty-state">
+          Generate a grid of locations to see detected business categories and recommended cards.
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Saved cards (mock)</h2>
+          <span class="pill">Local only</span>
+        </div>
+        <div id="saved-cards" class="cards"></div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -20,7 +20,13 @@ class UserPreferences:
 
 
 def expected_rewards(card: Card, category: str, amount: float) -> float:
-    multiplier = card.reward_rules.get(category, card.reward_rules.get("general", 1.0))
+    alias_map = {
+        "coffee": "restaurant",
+        "pet_store": "general",
+        "pharmacy": "general",
+    }
+    resolved = alias_map.get(category, category)
+    multiplier = card.reward_rules.get(resolved, card.reward_rules.get("general", 1.0))
     return amount * multiplier
 
 

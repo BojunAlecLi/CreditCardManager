@@ -1,0 +1,276 @@
+:root {
+  color-scheme: light;
+  --ink: #1c1a12;
+  --muted: #5b5140;
+  --paper: #f8f1e2;
+  --amber: #d58b3b;
+  --sage: #4a6a5a;
+  --coral: #e06650;
+  --card: #fff7e9;
+  --shadow: 0 20px 60px rgba(36, 30, 18, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top, #fef7e6 0%, #f4e6c7 45%, #e9d1a4 100%);
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  animation: fadeIn 0.7s ease both;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  background: linear-gradient(120deg, #fef0cf 0%, #f7e0b5 50%, #f3d09a 100%);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--sage);
+  margin: 0 0 12px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 38px;
+}
+
+.subhead {
+  margin: 0;
+  max-width: 520px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: var(--sage);
+  color: #fef9f0;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.panel {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  margin-top: 24px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.pill {
+  background: #f0e1c2;
+  color: var(--muted);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+input,
+select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #dbc7a0;
+  background: #fffaf2;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 600;
+  background: var(--coral);
+  color: #fff9f4;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(224, 102, 80, 0.25);
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid #d7c4a0;
+}
+
+.empty-state {
+  color: var(--muted);
+  padding: 20px 0;
+}
+
+.sweep-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.sweep-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.sweep-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr);
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fffaf1;
+  border: 1px solid #ead8b4;
+  font-size: 14px;
+}
+
+.sweep-row span {
+  color: var(--muted);
+}
+
+.benefits {
+  display: grid;
+  gap: 12px;
+  animation: riseIn 0.5s ease both;
+}
+
+.benefit-card {
+  background: #fffaf1;
+  border: 1px solid #ead8b4;
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.benefit-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.kv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.saved-card {
+  border-radius: 18px;
+  padding: 16px;
+  background: linear-gradient(130deg, #fdf2da, #f6ddb0);
+  border: 1px solid #e2c695;
+}
+
+.saved-card h3 {
+  margin: 0 0 8px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .actions {
+    flex-direction: column;
+  }
+  .sweep-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sweep-row {
+    grid-template-columns: 1fr;
+  }
+}

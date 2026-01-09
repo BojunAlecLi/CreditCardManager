@@ -1,11 +1,11 @@
 """End-to-end recommendation pipeline (MVP)."""
 
 import json
-from dataclasses import asdict
 from typing import Dict, List
 
 from engine.category_predictor import predict_category
 from engine.explanations import build_explanations
+from engine.poi_detector import detect_poi_category, load_merchants
 from engine.reward_optimizer import Card, UserPreferences, recommend_card
 
 
@@ -36,6 +36,12 @@ def load_prefs(path: str) -> UserPreferences:
 
 
 def recommend(context: Dict, cards: List[Card], prefs: UserPreferences) -> Dict:
+    if not context.get("poi_category") and context.get("lat") and context.get("lng"):
+        merchants_path = context.get("merchants_path", "data/sample_datasets/merchants.json")
+        merchants = load_merchants(merchants_path)
+        match = detect_poi_category(context["lat"], context["lng"], merchants)
+        if match:
+            context = {**context, "poi_category": match.get("category")}
     prediction = predict_category(context)
     accepts_amex = context.get("accepts_amex", True)
     card = recommend_card(
@@ -87,6 +93,7 @@ if __name__ == "__main__":
         "poi_category": "restaurant",
         "amount": 42.5,
         "local_time": "dinner",
+        "accepts_amex": True,
     }
 
     output = recommend(ctx, cards, prefs)
