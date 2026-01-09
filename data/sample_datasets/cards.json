@@ -1,0 +1,51 @@
+[
+  {
+    "id": "cobalt",
+    "name": "Amex Cobalt",
+    "network": "amex",
+    "reward_rules": {"restaurant": 5, "grocery": 5, "general": 1},
+    "constraints": {"requires_amex": true}
+  },
+  {
+    "id": "scotia_gold_amex",
+    "name": "Scotiabank Gold Amex",
+    "network": "amex",
+    "reward_rules": {"restaurant": 5, "grocery": 5, "transit": 3, "gas": 3, "general": 1},
+    "constraints": {"requires_amex": true}
+  },
+  {
+    "id": "rogers_we",
+    "name": "Rogers World Elite",
+    "network": "mastercard",
+    "reward_rules": {"general": 1.5, "transit": 2},
+    "constraints": {"requires_amex": false}
+  },
+  {
+    "id": "td_aeroplan_visa",
+    "name": "TD Aeroplan Visa",
+    "network": "visa",
+    "reward_rules": {"travel": 2, "grocery": 1.5, "gas": 1.5, "general": 1},
+    "constraints": {"requires_amex": false}
+  },
+  {
+    "id": "cibc_dividend",
+    "name": "CIBC Dividend Visa",
+    "network": "visa",
+    "reward_rules": {"grocery": 2, "gas": 2, "drugstore": 1.5, "general": 1},
+    "constraints": {"requires_amex": false}
+  },
+  {
+    "id": "bmo_cashback",
+    "name": "BMO Cashback Mastercard",
+    "network": "mastercard",
+    "reward_rules": {"grocery": 3, "transit": 2, "gas": 2, "general": 1},
+    "constraints": {"requires_amex": false}
+  },
+  {
+    "id": "rbc_avion",
+    "name": "RBC Avion Visa Infinite",
+    "network": "visa",
+    "reward_rules": {"travel": 2, "restaurant": 1.5, "general": 1},
+    "constraints": {"requires_amex": false}
+  }
+]

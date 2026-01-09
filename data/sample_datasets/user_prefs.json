@@ -1,0 +1,11 @@
+{
+  "mode": "max_points",
+  "weights": {
+    "bonus_chase": 0.7,
+    "fee_break_even": 0.1
+  },
+  "bonus_progress": {
+    "cobalt": 0.4,
+    "rogers_we": 0.9
+  }
+}

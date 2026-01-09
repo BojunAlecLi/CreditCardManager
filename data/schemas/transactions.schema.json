@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Transaction",
+  "type": "object",
+  "required": ["timestamp", "amount", "amount_bucket", "place_id", "predicted_category"],
+  "properties": {
+    "timestamp": {"type": "string"},
+    "amount": {"type": "number"},
+    "amount_bucket": {"type": "string"},
+    "place_id": {"type": "string"},
+    "predicted_category": {"type": "string"},
+    "actual_category": {"type": "string"},
+    "chosen_card": {"type": "string"}
+  }
+}

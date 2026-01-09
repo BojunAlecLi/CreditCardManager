@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Merchant",
+  "type": "object",
+  "required": ["place_id", "name", "category", "geo"],
+  "properties": {
+    "place_id": {"type": "string"},
+    "name": {"type": "string"},
+    "category": {"type": "string"},
+    "geo": {
+      "type": "object",
+      "required": ["lat", "lng"],
+      "properties": {
+        "lat": {"type": "number"},
+        "lng": {"type": "number"}
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": "2025-01-12T19:04:00Z",
+    "amount": 42.50,
+    "amount_bucket": "under_60",
+    "place_id": "poi_001",
+    "predicted_category": "restaurant",
+    "actual_category": "restaurant",
+    "chosen_card": "cobalt"
+  }
+]

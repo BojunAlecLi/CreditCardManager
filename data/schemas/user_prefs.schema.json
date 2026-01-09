@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UserPreferences",
+  "type": "object",
+  "required": ["mode", "weights", "bonus_progress"],
+  "properties": {
+    "mode": {"type": "string"},
+    "weights": {"type": "object"},
+    "bonus_progress": {"type": "object"}
+  }
+}

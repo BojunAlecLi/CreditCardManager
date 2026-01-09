@@ -1,0 +1,14 @@
+[
+  {
+    "place_id": "poi_001",
+    "name": "Sunrise Diner",
+    "category": "restaurant",
+    "geo": {"lat": 43.65, "lng": -79.38}
+  },
+  {
+    "place_id": "poi_002",
+    "name": "Maple Grocery",
+    "category": "grocery",
+    "geo": {"lat": 43.66, "lng": -79.39}
+  }
+]
